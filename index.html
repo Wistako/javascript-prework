@@ -3,16 +3,28 @@
     <head>
         <meta charset="UTF-8" />
         <title>Kamień, papier, nożyce</title>
+        <script
+            src="https://kit.fontawesome.com/698b3f9744.js"
+            crossorigin="anonymous"
+        ></script>
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
         <div class="container">
-            <div id="buttons">
-                <button id="play-rock">Kamień</button>
-                <button id="play-paper">Papier</button>
-                <button id="play-scissors">Nożyce</button>
+            <div id="buttons" class="choose">
+                <h1>Zagraj ze mną !</h1>
+                <h3>Papier Kamień Nożyce</h3>
+                <i class="fa-solid fa-hand" id="play-paper"></i>
+                <i class="fa-solid fa-hand-fist" id="play-rock"></i>
+                <i class="fa-solid fa-scissors" id="play-scissors"></i>
+                <!--
+                <button class="btn" id="play-rock">Kamień</button>
+                <button class="btn" id="play-paper">Papier</button>
+                <button class="btn" id="play-scissors">Nożyce</button>
+                -->
             </div>
-            <div id="messages"></div>
+            <div id="messages" class="messages"></div>
+            <div id="result" class="result"></div>
         </div>
         <script src="js/functions.js"></script>
         <script src="js/script.js"></script>

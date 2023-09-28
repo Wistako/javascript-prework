@@ -1,3 +1,7 @@
+let scoreComputer = 0;
+let scorePlayer = 0;
+let howMany = 0;
+
 function playGame(playerInput) {
     clearMessages();
     function getMoveName(argMoveId) {
@@ -35,24 +39,43 @@ function playGame(playerInput) {
     }
     let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-    console.log("Wylosowana liczba to: " + randomNumber);
+    //console.log("Wylosowana liczba to: " + randomNumber);
 
     let computerMove = getMoveName(randomNumber);
 
     printMessage("Mój ruch to: " + computerMove);
 
-    console.log("Gracz wpisał: " + playerInput);
+    //console.log("Gracz wpisał: " + playerInput);
 
     let playerMove = getMoveName(playerInput);
 
     printMessage("Twój ruch to: " + playerMove);
 
     printMessage(displayResult(computerMove, playerMove));
+    if (displayResult(computerMove, playerMove) == "Wygrałeś!") {
+        scorePlayer++;
+    } else if (displayResult(computerMove, playerMove) == "Przegrałeś!") {
+        scoreComputer++;
+    }
+    printResult(
+        scorePlayer +
+            " - " +
+            scoreComputer +
+            " = " +
+            (scorePlayer - scoreComputer)
+    );
+    howMany++;
+    printResult("Grałeś: " + howMany + " razy");
 }
 
-document.getElementById("play-rock").addEventListener("click", function () {
-    playGame(1);
-});
+//
+// printResult("Liczba gier: " + moves);
+// printResult("Ilość wygranych: " + result);
+for (let i = 0; i < 100; i++) {
+    document.getElementById("play-rock").addEventListener("click", function () {
+        playGame(1);
+    });
+}
 document.getElementById("play-paper").addEventListener("click", function () {
     playGame(2);
 });

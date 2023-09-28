@@ -1,3 +1,29 @@
-
-
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    text-align: center;
+    margin: 12px;
+}
+.choose {
+    margin-top: 12px;
+}
+.choose i {
+    color: #3b3b98;
+    line-height: 96px;
+    border: 12px solid #58b19f;
+    width: 96px;
+    height: 96px;
+    font-size: 48px;
+    border-radius: 50%;
+}
+.messages,
+.result {
+    font-size: 28px;
+    margin-top: 28px;
+}
+.messages div, .result div{
+    margin-top: 24px;
+}
 /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
