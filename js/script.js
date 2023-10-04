@@ -1,3 +1,4 @@
+{
 let scoreComputer = 0;
 let scorePlayer = 0;
 let howMany = 0;
@@ -37,17 +38,17 @@ function playGame(playerInput) {
             return "Źle wybrałeś liczbe!";
         }
     }
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
 
     //console.log("Wylosowana liczba to: " + randomNumber);
 
-    let computerMove = getMoveName(randomNumber);
+    const computerMove = getMoveName(randomNumber);
 
     printMessage("Mój ruch to: " + computerMove);
 
     //console.log("Gracz wpisał: " + playerInput);
 
-    let playerMove = getMoveName(playerInput);
+    const playerMove = getMoveName(playerInput);
 
     printMessage("Twój ruch to: " + playerMove);
 
@@ -82,3 +83,4 @@ document.getElementById("play-paper").addEventListener("click", function () {
 document.getElementById("play-scissors").addEventListener("click", function () {
     playGame(3);
 });
+}
